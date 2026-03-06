@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industrial Plumbing | Apex Plumbing Projects</title>
+  <meta name="description" content="Complex plumbing systems for factories, warehouses and large-scale facilities. Fully certified team. 24/7 emergency service.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --teal: #35676A;
+  --dark: #2C4949;
+  --deep: #054D42;
+  --lt-teal: #69ADB6;
+  --copper: #1BA8B5;
+  --gold: #D7B791;
+  --cream: #F5EEDC;
+  --bg: #FAFAF7;
+  --white: #FFFFFF;
+  --tx: #1A1A1A;
+  --mu: #5F6B6B;
+  --bd: #DDE3E0;
+  --lt: #F0F4F2;
+}
+
+* { box-sizing: border-box; margin: 0; }
+::selection { background: #35676A; color: #fff; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bg);
+  min-height: 100vh;
+  color: var(--tx);
+}
+
+a { text-decoration: none; }
+
+/* TOP BAR */
+.top-bar {
+  background: var(--dark);
+  padding: 8px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11.5px;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.8px;
+}
+.top-bar a { color: #fff; font-weight: 600; text-decoration: none; }
+
+/* NAV */
+nav.main-nav {
+  background: var(--white);
+  padding: 0 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--bd);
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 96px;
+}
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-img { height: 80px; width: auto; }
+.footer-logo-img { height: 44px; width: auto; margin-bottom: 16px; }
+.nav-links { display: flex; align-items: center; gap: 32px; }
+.nav-link { color: var(--tx); cursor: pointer; font-size: 13px; font-weight: 500; letter-spacing: 0.3px; text-decoration: none; }
+.nav-link:hover, .nav-link.active { color: var(--teal); }
+.nav-phone {
+  background: var(--teal);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* SERVICES DROPDOWN */
+.svc-dropdown { position: relative; padding: 10px 0; }
+.svc-dropdown-btn {
+  color: var(--tx);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+.svc-dropdown-btn:hover, .svc-dropdown-btn.active { color: var(--teal); }
+.svc-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  padding-top: 4px;
+  z-index: 200;
+}
+.svc-dropdown:hover .svc-dropdown-menu { display: block; }
+.svc-dropdown-inner {
+  background: var(--white);
+  border: 1px solid var(--bd);
+  border-radius: 6px;
+  padding: 6px 0;
+  min-width: 220px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+.svc-dropdown-inner a {
+  display: block;
+  padding: 9px 20px;
+  color: var(--tx);
+  font-size: 13px;
+  text-decoration: none;
+}
+.svc-dropdown-inner a:hover { background: var(--lt); color: var(--lt-teal); }
+
+/* MOBILE NAV */
+.mob-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 8px;
+  background: none;
+  border: none;
+}
+.mob-toggle span {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: var(--dark);
+  margin: 4px 0;
+}
+.mob-menu {
+  display: none;
+  padding: 12px 0;
+  border-top: 1px solid var(--bd);
+}
+.mob-menu.open { display: block; }
+.mob-menu a {
+  display: block;
+  padding: 10px 0;
+  color: var(--tx);
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.mob-menu .mob-svc-link {
+  padding: 7px 0;
+  color: var(--mu);
+  font-size: 13px;
+}
+.mob-menu .mob-divider { height: 1px; background: var(--bd); margin: 6px 0; }
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-bg svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(44,73,73,0.88), rgba(44,73,73,0.35));
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+}
+.hero-content { max-width: 1200px; margin: 0 auto; width: 100%; }
+.hero h1 {
+  color: #fff;
+  font-size: 50px;
+  font-family: 'DM Serif Display', Georgia, serif;
+  line-height: 1.1;
+  margin: 0 0 20px;
+  font-weight: 500;
+  max-width: 540px;
+}
+.hero p {
+  color: rgba(255,255,255,0.6);
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 0 32px;
+  max-width: 540px;
+}
+.hero-btns { display: flex; gap: 12px; }
+.btn-primary {
+  background: var(--copper);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 14px 36px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-outline {
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 3px;
+  padding: 14px 28px;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+}
+.btn-outline-dark {
+  border: 1px solid var(--bd);
+  color: var(--tx);
+  border-radius: 3px;
+  padding: 12px 28px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  background: none;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* PAGE HERO (smaller) */
+.page-hero {
+  position: relative;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+}
+.page-hero.small { min-height: 320px; }
+.page-hero-dark {
+  background: var(--dark);
+  padding: 64px 5%;
+}
+
+/* PHOTO BG SCENES */
+.photo-bg { min-height: 400px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.photo-bg.hero-scene { background: linear-gradient(135deg, #054D42 0%, #2C4949 40%, #1F3D3D 100%); min-height: 520px; }
+.photo-bg.team-scene { background: linear-gradient(135deg, #2C4949 0%, #054D42 60%, #1C3535 100%); }
+.photo-bg.work-scene { background: linear-gradient(135deg, #054D42 0%, #1A3838 50%, #2C4949 100%); }
+.photo-bg.bathroom-scene { background: linear-gradient(135deg, #2C4949 0%, #054D42 40%, #1A3838 100%); min-height: 500px; }
+.photo-bg.service-scene { background: linear-gradient(135deg, #054D42 0%, #2C4949 50%, #1C3535 100%); min-height: 320px; }
+.photo-bg svg.scene-svg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.8; }
+
+/* STATS BAR */
+.stats-bar {
+  background: var(--white);
+  border-bottom: 1px solid var(--bd);
+}
+.stats-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.stat {
+  text-align: center;
+  padding: 28px 16px;
+  border-right: 1px solid var(--bd);
+}
+.stat:last-child { border-right: none; }
+.stat-value {
+  color: var(--teal);
+  font-size: 26px;
+  font-weight: 600;
+  font-family: 'DM Serif Display', Georgia, serif;
+}
+.stat-label { color: var(--mu); font-size: 11px; margin-top: 2px; }
+
+/* SECTION LABEL */
+.label {
+  color: var(--copper);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.label.dark { color: var(--gold); }
+
+/* SECTIONS */
+.section { padding: 80px 5%; }
+.section .container { max-width: 1200px; margin: 0 auto; }
+.section-title {
+  font-size: 34px;
+  font-family: 'DM Serif Display', Georgia, serif;
+  color: var(--dark);
+  margin: 0 0 12px;
+  font-weight: 500;
+}
+.section-title.sm { font-size: 28px; }
+.section-title.md { font-size: 30px; }
+.section-subtitle {
+  color: var(--mu);
+  font-size: 14px;
+  margin-bottom: 40px;
+  max-width: 520px;
+}
+
+/* SERVICE GRID */
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--bd);
+}
+.svc-card {
+  background: var(--white);
+  padding: 32px 28px;
+  cursor: pointer;
+  transition: all 0.25s;
+  text-decoration: none;
+  display: block;
+}
+.svc-card:hover { background: var(--lt); }
+.svc-card h3 { font-size: 15px; color: var(--dark); margin: 0 0 6px; font-weight: 600; }
+.svc-card p { color: var(--mu); font-size: 13px; margin: 0 0 14px; line-height: 1.5; }
+.svc-card .learn-more {
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ABOUT SPLIT */
+.split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.split-content {
+  padding: 64px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.features-mini {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 16px 0 28px;
+}
+.feature-mini {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.feature-mini .chk { margin-top: 3px; flex-shrink: 0; }
+.feature-mini h4 { color: var(--dark); font-size: 13px; font-weight: 600; margin: 0; }
+.feature-mini p { color: var(--mu); font-size: 12px; margin: 0; }
+
+/* REVIEWS */
+.review-grid {
+  display: grid;
+  gap: 20px;
+}
+.review-grid.cols-6 { grid-template-columns: repeat(3, 1fr); }
+.review-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.review-card {
+  padding: 26px 22px;
+  border: 1px solid var(--bd);
+  border-radius: 4px;
+  background: var(--white);
+}
+.stars { display: flex; gap: 2px; margin-bottom: 12px; }
+.review-card p { color: var(--tx); font-size: 14px; line-height: 1.6; margin: 0 0 14px; }
+.review-card .author { color: var(--mu); font-size: 12px; font-weight: 600; }
+
+/* AREA TAGS */
+.area-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+.area-tag {
+  padding: 10px 20px;
+  border: 1px solid var(--bd);
+  border-radius: 3px;
+  font-size: 13px;
+  color: var(--tx);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+  background: none;
+}
+.area-tag:hover { border-color: var(--teal); color: var(--lt-teal); }
+
+/* CTA BAND */
+.cta-band {
+  background: url('https://apexplumbingprojects.com.au/wp-content/uploads/2026/03/1.png') center/cover no-repeat;
+  padding: 72px 5%;
+  text-align: center;
+  position: relative;
+}
+.cta-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+}
+.cta-band > * { position: relative; z-index: 1; }
+.cta-band h2 {
+  color: #fff;
+  font-size: 30px;
+  font-family: 'DM Serif Display', Georgia, serif;
+  margin: 0 0 12px;
+  font-weight: 500;
+}
+.cta-band p { color: rgba(255,255,255,0.4); font-size: 14px; margin: 0 0 28px; }
+.cta-band .cta-btns { display: flex; gap: 12px; justify-content: center; }
+.cta-band .btn-copper {
+  background: var(--copper);
+  color: #fff;
+  padding: 14px 40px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.cta-band .btn-ghost {
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  padding: 14px 40px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  background: none;
+  cursor: pointer;
+}
+.cta-band .btn-white {
+  background: var(--white);
+  color: var(--dark);
+  padding: 14px 40px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* WHY CHOOSE */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.why-card {
+  padding: 36px 28px;
+  border: 1px solid var(--bd);
+  border-radius: 4px;
+}
+.why-card h3 { font-size: 16px; color: var(--dark); margin: 0 0 10px; font-weight: 600; }
+.why-card p { color: var(--mu); font-size: 13px; line-height: 1.7; margin: 0; }
+
+/* PROCESS STEPS */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.process-card {
+  padding: 28px 22px;
+  border: 1px solid var(--bd);
+  border-radius: 4px;
+  background: var(--white);
+  border-top: 3px solid var(--copper);
+}
+.process-num {
+  color: var(--copper);
+  font-size: 28px;
+  font-weight: 300;
+  font-family: 'DM Serif Display', Georgia, serif;
+  margin-bottom: 10px;
+}
+.process-card h3 { color: var(--dark); font-size: 14px; margin: 0 0 6px; font-weight: 600; }
+.process-card p { color: var(--mu); font-size: 12px; line-height: 1.6; margin: 0; }
+
+/* FAQ */
+.faq-item { border-bottom: 1px solid var(--bd); }
+.faq-q {
+  padding: 18px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: var(--tx);
+  font-size: 15px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+}
+.faq-q .plus { flex-shrink: 0; margin-left: 16px; transition: transform 0.2s; }
+.faq-q.open .plus { transform: rotate(45deg); }
+.faq-a {
+  display: none;
+  padding-bottom: 18px;
+  color: var(--mu);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.faq-a.open { display: block; }
+
+/* QUOTE FORM */
+.qf { display: flex; flex-direction: column; gap: 12px; }
+.qf input, .qf select, .qf textarea {
+  width: 100%;
+  padding: 13px 16px;
+  background: var(--white);
+  border: 1px solid var(--bd);
+  border-radius: 3px;
+  color: var(--tx);
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+}
+.qf select { color: var(--mu); }
+.qf textarea { min-height: 80px; resize: vertical; }
+.qf .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.qf button {
+  background: var(--copper);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* CONTACT CARDS */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--bd);
+  margin-bottom: 48px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.contact-card {
+  background: var(--white);
+  padding: 24px 22px;
+}
+.contact-card .card-label {
+  color: var(--mu);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+.contact-card a { color: var(--dark); font-size: 13px; font-weight: 600; text-decoration: none; word-break: break-all; display: block; }
+.contact-card .card-sub { color: var(--mu); font-size: 11px; margin-top: 4px; }
+.contact-card .card-value { color: var(--dark); font-size: 13px; font-weight: 600; }
+
+/* CONTENT GRID */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+.content-grid.sidebar {
+  grid-template-columns: 1fr 380px;
+  gap: 56px;
+}
+
+/* SIDEBAR FORM */
+.sidebar-form {
+  background: var(--white);
+  border: 1px solid var(--bd);
+  border-radius: 4px;
+  padding: 28px;
+  position: sticky;
+  top: 100px;
+}
+.sidebar-form h3 { font-size: 16px; color: var(--dark); margin: 0 0 4px; font-weight: 600; }
+.sidebar-form .form-sub { color: var(--mu); font-size: 12px; margin: 0 0 20px; }
+.sidebar-form .call-info { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--bd); }
+.sidebar-form .call-info .call-label { color: var(--mu); font-size: 11px; margin-bottom: 8px; }
+.sidebar-form .call-info a { display: block; text-decoration: none; }
+.sidebar-form .call-info .phone-main { color: var(--dark); font-size: 15px; font-weight: 600; }
+.sidebar-form .call-info .phone-alt { color: var(--mu); font-size: 13px; margin-top: 2px; }
+
+/* SERVICE PAGE */
+.breadcrumb { color: rgba(255,255,255,0.3); font-size: 12px; margin-bottom: 16px; }
+.breadcrumb a { color: rgba(255,255,255,0.3); text-decoration: none; }
+.breadcrumb .current { color: rgba(255,255,255,0.6); }
+.hero-badges { display: flex; gap: 20px; flex-wrap: wrap; }
+.hero-badge { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.55); font-size: 12px; }
+.svc-desc { color: var(--mu); font-size: 15px; line-height: 1.8; margin-bottom: 12px; }
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--white);
+  border-radius: 3px;
+  border: 1px solid var(--bd);
+}
+.feature-item span { color: var(--tx); font-size: 13px; }
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--bd);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.related-card {
+  background: var(--white);
+  padding: 28px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: block;
+}
+.related-card:hover { background: var(--lt); }
+.related-card h3 { color: var(--dark); font-size: 14px; margin: 0 0 4px; font-weight: 600; }
+.related-card p { color: var(--mu); font-size: 12px; margin: 0 0 10px; line-height: 1.5; }
+.related-card .learn { color: var(--teal); font-size: 12px; font-weight: 600; }
+
+/* WHAT HAPPENS NEXT */
+.next-steps {
+  background: var(--white);
+  border: 1px solid var(--bd);
+  border-radius: 4px;
+  padding: 24px;
+}
+.next-steps h3 { font-size: 15px; color: var(--dark); margin: 0 0 10px; font-weight: 600; }
+.next-step { display: flex; gap: 10px; margin-bottom: 12px; align-items: flex-start; }
+.next-step:last-child { margin-bottom: 0; }
+.next-step .chk { margin-top: 3px; flex-shrink: 0; }
+.next-step h4 { color: var(--dark); font-size: 13px; font-weight: 600; margin: 0; }
+.next-step p { color: var(--mu); font-size: 12px; line-height: 1.5; margin: 0; }
+
+/* ABOUT BADGE */
+.about-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--bd);
+  border-radius: 3px;
+  padding: 7px 14px;
+  margin-bottom: 28px;
+}
+.about-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); }
+.about-badge span { color: var(--mu); font-size: 12px; letter-spacing: 1px; }
+
+/* AREAS MAP */
+.areas-map {
+  background: #2C4949;
+  min-height: 300px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.contact-map {
+  background: #2C4949;
+  min-height: 300px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.regions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--bd);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.region-card {
+  background: var(--white);
+  padding: 24px 20px;
+}
+.region-card h4 { color: var(--dark); font-size: 14px; margin: 0 0 8px; font-weight: 600; }
+.region-card p { color: var(--mu); font-size: 12px; line-height: 1.6; margin: 0; }
+
+/* FOOTER */
+footer {
+  background: var(--deep);
+}
+.footer-accent {
+  height: 3px;
+  background: linear-gradient(90deg, var(--copper), var(--gold), var(--copper));
+}
+.footer-inner {
+  padding: 64px 5% 0;
+}
+.footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  padding-bottom: 48px;
+}
+.footer-brand { color: #fff; font-weight: 700; font-size: 15px; font-family: 'DM Serif Display', Georgia, serif; letter-spacing: 2px; margin-bottom: 14px; }
+.footer-desc { color: rgba(255,255,255,0.35); font-size: 13px; line-height: 1.7; margin: 0 0 14px; max-width: 280px; }
+.footer-heading { color: rgba(255,255,255,0.25); font-size: 10px; letter-spacing: 2px; margin-bottom: 12px; font-weight: 600; }
+.footer-link { color: rgba(255,255,255,0.45); font-size: 12px; padding: 4px 0; display: block; text-decoration: none; }
+.footer-link:hover { color: rgba(255,255,255,0.7); }
+.footer-phone { color: #fff; font-size: 15px; font-weight: 600; text-decoration: none; display: block; margin-bottom: 4px; }
+.footer-phone-alt { color: rgba(255,255,255,0.5); font-size: 13px; text-decoration: none; display: block; margin-bottom: 12px; }
+.footer-email { color: rgba(255,255,255,0.35); font-size: 12px; }
+.footer-addr { color: rgba(255,255,255,0.3); font-size: 12px; margin-top: 8px; }
+.footer-hours { color: rgba(255,255,255,0.25); font-size: 11px; margin-top: 4px; }
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-copy { color: rgba(255,255,255,0.2); font-size: 11px; }
+.footer-credit { color: rgba(255,255,255,0.2); font-size: 11px; }
+.footer-credit span { color: #FFC500; }
+
+/* SERVICE PAGE HERO */
+.service-hero {
+  position: relative;
+  min-height: 320px;
+}
+.service-hero-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.service-hero-bg svg.scene-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+.service-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(15,130,145,0.85), rgba(15,130,145,0.3));
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+}
+.service-hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+.service-hero h1 {
+  color: #fff;
+  font-size: 40px;
+  font-family: 'DM Serif Display', Georgia, serif;
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+.service-hero p {
+  color: rgba(255,255,255,0.5);
+  font-size: 14px;
+  margin: 0 0 24px;
+  max-width: 520px;
+}
+.service-badges {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.service-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.55);
+  font-size: 12px;
+}
+
+/* SIDEBAR EXTRAS */
+.sidebar-call {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--bd);
+}
+.sidebar-phone {
+  color: var(--dark);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+}
+.sidebar-phone-alt {
+  color: var(--mu);
+  font-size: 13px;
+  text-decoration: none;
+  display: block;
+  margin-top: 2px;
+}
+
+/* PROCESS CARD NUM (alternate class) */
+.process-card-num {
+  color: var(--copper);
+  font-size: 22px;
+  font-weight: 300;
+  font-family: 'DM Serif Display', Georgia, serif;
+  margin-bottom: 8px;
+}
+
+/* SERVICE GRID (3 cols variant) */
+.svc-grid.three {
+  grid-template-columns: repeat(3, 1fr);
+}
+.areas-svc-card{position:relative;border-radius:10px;overflow:hidden;min-height:220px;display:flex;align-items:flex-end;background-size:cover;background-position:center;background-color:var(--dark);text-decoration:none;transition:transform .3s}
+.areas-svc-card:hover{transform:scale(1.02)}
+.areas-svc-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(5,77,66,.85) 0%,rgba(5,77,66,.3) 45%,transparent 100%);border-radius:10px}
+.areas-svc-card h4{position:relative;z-index:1;color:#fff;font-size:22px;font-family:'DM Serif Display',Georgia,serif;font-weight:400;padding:20px 24px;margin:0}
+
+/* REVIEW GRID default */
+.review-grid:not(.cols-6):not(.cols-3) {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* SVG ICONS */
+.icon-chk, .icon-arr, .icon-star, .icon-plus { display: inline-block; vertical-align: middle; }
+
+/* BACKGROUNDS */
+.bg-white { background: var(--white); }
+.bg-cream { background: var(--cream); }
+.bg-light { background: var(--bg); }
+.bg-dark { background: var(--dark); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links { display: none !important; }
+  .mob-toggle { display: block !important; }
+  h1 { font-size: 30px !important; }
+  .hero { min-height: 400px; }
+  .stats-grid { grid-template-columns: repeat(3, 1fr); }
+  .stat:nth-child(4), .stat:nth-child(5) { border-top: 1px solid var(--bd); }
+  .svc-grid { grid-template-columns: 1fr; }
+  .split-grid { grid-template-columns: 1fr; }
+  .split-content { padding: 40px 20px; }
+  .review-grid.cols-6, .review-grid.cols-3 { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: 1fr 1fr; }
+  .content-grid { grid-template-columns: 1fr; }
+  .content-grid.sidebar { grid-template-columns: 1fr; }
+  .sidebar-form { position: static; }
+  .contact-grid { grid-template-columns: 1fr 1fr; }
+  .features-grid { grid-template-columns: 1fr; }
+  .features-mini { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .regions-grid { grid-template-columns: 1fr 1fr; }
+  .related-grid { grid-template-columns: 1fr; }
+  .hero-btns { flex-direction: column; }
+  .cta-band .cta-btns { flex-direction: column; align-items: center; }
+  .top-bar { flex-direction: column; gap: 4px; text-align: center; }
+  .hero-badges { flex-direction: column; gap: 8px; }
+  .service-badges { flex-direction: column; gap: 8px; }
+  .service-hero { min-height: 260px; }
+  .svc-grid.three { grid-template-columns: 1fr; }
+  .area-tags { justify-content: center; }
+  .section { padding: 48px 5%; }
+  .page-hero { min-height: 260px; }
+}
+
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .process-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .regions-grid { grid-template-columns: 1fr; }
+  .qf .row { grid-template-columns: 1fr; }
+}
+
+</style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <span>Proudly Indigenous-Owned &middot; Master Plumbers</span>
+    <span>24/7 Emergency &middot; <a href="tel:0404998448">0404 998 448</a></span>
+  </div>
+
+  <!-- NAV -->
+  <nav class="main-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <img src="https://apexplumbingprojects.com.au/wp-content/uploads/2026/03/Apex-Logo.png" alt="Apex Plumbing Projects" class="logo-img">
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="areas.html" class="nav-link">Areas</a>
+        <div class="svc-dropdown">
+          <button class="svc-dropdown-btn active">Services <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="svc-dropdown-menu">
+            <div class="svc-dropdown-inner">
+              <a href="residential-plumbing.html">Residential Plumbing</a>
+              <a href="commercial-plumbing.html">Commercial Plumbing</a>
+              <a href="industrial-plumbing.html">Industrial Plumbing</a>
+              <a href="blocked-drains.html">Blocked Drains</a>
+              <a href="hot-water-repairs.html">Hot Water Systems</a>
+              <a href="bathroom-renovations.html">Bathroom Renovations</a>
+              <a href="toilet-repairs.html">Toilet Repairs</a>
+              <a href="plumbing-maintenance.html">Plumbing Maintenance</a>
+              <a href="leaking-pipes.html">Leaking Pipes</a>
+            </div>
+          </div>
+        </div>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="tel:0404998448" class="nav-phone">0404 998 448</a>
+      </div>
+      <button class="mob-toggle"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mob-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="areas.html">Areas We Service</a>
+      <a href="contact.html">Contact</a>
+      <div class="mob-divider"></div>
+      <a href="residential-plumbing.html" class="mob-svc-link">Residential Plumbing</a>
+      <a href="commercial-plumbing.html" class="mob-svc-link">Commercial Plumbing</a>
+      <a href="industrial-plumbing.html" class="mob-svc-link">Industrial Plumbing</a>
+      <a href="blocked-drains.html" class="mob-svc-link">Blocked Drains</a>
+      <a href="hot-water-repairs.html" class="mob-svc-link">Hot Water Systems</a>
+      <a href="bathroom-renovations.html" class="mob-svc-link">Bathroom Renovations</a>
+      <a href="toilet-repairs.html" class="mob-svc-link">Toilet Repairs</a>
+      <a href="plumbing-maintenance.html" class="mob-svc-link">Plumbing Maintenance</a>
+      <a href="leaking-pipes.html" class="mob-svc-link">Leaking Pipes</a>
+    </div>
+  </nav>
+
+  <!-- SERVICE HERO -->
+  <section class="service-hero">
+    <div class="service-hero-bg" style="background:url('https://apexplumbingprojects.com.au/wp-content/uploads/2026/03/Industrial-Plumbing-1.png') center/cover no-repeat">
+      <svg viewBox="0 0 400 280" preserveAspectRatio="xMidYMid slice" class="scene-svg">
+        <path d="M180 80 L220 80 L225 160 L175 160 Z" fill="rgba(53,103,106,0.08)" stroke="rgba(53,103,106,0.12)" stroke-width="1"/>
+        <circle cx="200" cy="120" r="20" fill="none" stroke="rgba(105,173,182,0.12)" stroke-width="1.5"/>
+        <path d="M200 105 C200 105 190 115 190 121 a10 10 0 0020 0 c0-6-10-16-10-16z" fill="rgba(166,108,68,0.12)"/>
+        <line x1="150" y1="170" x2="250" y2="170" stroke="rgba(53,103,106,0.08)" stroke-width="2"/>
+        <line x1="160" y1="182" x2="240" y2="182" stroke="rgba(53,103,106,0.06)" stroke-width="2"/>
+        <line x1="170" y1="194" x2="230" y2="194" stroke="rgba(53,103,106,0.04)" stroke-width="2"/>
+        <circle cx="310" cy="80" r="50" fill="rgba(53,103,106,0.02)"/>
+        <circle cx="90" cy="160" r="45" fill="rgba(105,173,182,0.02)"/>
+      </svg>
+    </div>
+    <div class="service-hero-overlay">
+      <div class="service-hero-content">
+        <div class="breadcrumb"><a href="index.html">Home</a> / <a href="index.html#services">Services</a> / Industrial Plumbing</div>
+        <h1>Industrial Plumbing</h1>
+        <p>Complex systems for factories, warehouses and large-scale facilities.</p>
+        <div class="service-badges">
+          <span class="service-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A66C44" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> $0 call out</span>
+          <span class="service-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A66C44" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Upfront pricing</span>
+          <span class="service-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A66C44" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Lifetime warranty</span>
+          <span class="service-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A66C44" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Same-day service</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="bg-light" style="padding:64px 5%">
+    <div class="content-grid sidebar" style="max-width:1200px;margin:0 auto">
+
+      <!-- LEFT COLUMN -->
+      <div>
+        <p style="color:#5F6B6B;font-size:14px;line-height:1.8;margin:0 0 16px">Apex Plumbing Projects delivers industrial plumbing services for factories, warehouses, processing facilities and large-scale infrastructure projects. Our team has the equipment, licensing and experience to handle high-pressure systems, trade waste management, and complex installations.</p>
+        <p style="color:#5F6B6B;font-size:14px;line-height:1.8;margin:0 0 40px">Industrial plumbing demands a higher level of precision and safety. Every member of our team holds current site inductions, working at heights certification, confined space training, and all relevant safety qualifications.</p>
+
+        <h3 style="font-size:20px;font-family:'DM Serif Display',Georgia,serif;color:#2C4949;margin:0 0 20px;font-weight:500">What We Offer</h3>
+        <div class="features-grid">
+          <div class="feature-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A66C44" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Factory plumbing systems</div>
+          <div class="feature-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A66C44" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Warehouse fit-outs</div>
+          <div class="feature-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A66C44" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> High-pressure pipelines</div>
+          <div class="feature-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A66C44" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Trade waste management</div>
+          <div class="feature-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A66C44" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Grease trap installation</div>
+          <div class="feature-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A66C44" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Fire service plumbing</div>
+          <div class="feature-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A66C44" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Backflow prevention</div>
+          <div class="feature-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A66C44" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Water treatment infrastructure</div>
+          <div class="feature-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A66C44" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Stormwater management</div>
+          <div class="feature-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A66C44" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg> Emergency maintenance</div>
+        </div>
+
+        <h3 style="font-size:20px;font-family:'DM Serif Display',Georgia,serif;color:#2C4949;margin:40px 0 20px;font-weight:500">Our Process</h3>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative">
+          <div style="position:absolute;top:28px;left:calc(12.5% + 28px);right:calc(12.5% + 28px);height:2px;background:linear-gradient(90deg,var(--copper),var(--gold),var(--copper));z-index:0"></div>
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1;padding:0 12px">
+            <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#35676A,#054D42);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:3px solid var(--bg);box-shadow:0 2px 10px rgba(53,103,106,0.25);margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div style="color:var(--copper);font-size:11px;font-weight:700;letter-spacing:1.5px;margin-bottom:4px">STEP 1</div>
+            <h4 style="font-size:15px;color:var(--dark);margin:0 0 6px;font-weight:700">You Call Us</h4>
+            <p style="color:var(--mu);font-size:12px;line-height:1.6;margin:0">You call us and describe the issue</p>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1;padding:0 12px">
+            <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#35676A,#054D42);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:3px solid var(--bg);box-shadow:0 2px 10px rgba(53,103,106,0.25);margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div style="color:var(--copper);font-size:11px;font-weight:700;letter-spacing:1.5px;margin-bottom:4px">STEP 2</div>
+            <h4 style="font-size:15px;color:var(--dark);margin:0 0 6px;font-weight:700">We Quote Upfront</h4>
+            <p style="color:var(--mu);font-size:12px;line-height:1.6;margin:0">A licensed plumber arrives and provides an upfront fixed-price quote</p>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1;padding:0 12px">
+            <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#35676A,#054D42);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:3px solid var(--bg);box-shadow:0 2px 10px rgba(53,103,106,0.25);margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+            <div style="color:var(--copper);font-size:11px;font-weight:700;letter-spacing:1.5px;margin-bottom:4px">STEP 3</div>
+            <h4 style="font-size:15px;color:var(--dark);margin:0 0 6px;font-weight:700">We Fix It Right</h4>
+            <p style="color:var(--mu);font-size:12px;line-height:1.6;margin:0">We complete the work to the highest standard</p>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1;padding:0 12px">
+            <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#35676A,#054D42);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:3px solid var(--bg);box-shadow:0 2px 10px rgba(53,103,106,0.25);margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+            <div style="color:var(--copper);font-size:11px;font-weight:700;letter-spacing:1.5px;margin-bottom:4px">STEP 4</div>
+            <h4 style="font-size:15px;color:var(--dark);margin:0 0 6px;font-weight:700">Guaranteed</h4>
+            <p style="color:var(--mu);font-size:12px;line-height:1.6;margin:0">All backed by our lifetime workmanship guarantee</p>
+          </div>
+        </div>
+
+        <h3 style="font-size:20px;font-family:'DM Serif Display',Georgia,serif;color:#2C4949;margin:40px 0 20px;font-weight:500">Frequently Asked Questions</h3>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q">Are your team qualified for industrial sites? <span class="plus"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#35676A" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+            <div class="faq-a">Yes. All plumbers hold current site inductions, working at heights, confined space, and all relevant safety certifications.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Can you handle large-scale projects? <span class="plus"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#35676A" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+            <div class="faq-a">Yes. We have experience with industrial facilities of all sizes across the region.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Do you offer 24/7 emergency service? <span class="plus"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#35676A" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+            <div class="faq-a">Yes. We understand downtime in an industrial facility is costly. Emergency response is available 24/7.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">What safety systems do you have? <span class="plus"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#35676A" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+            <div class="faq-a">Comprehensive WHS management, daily toolbox talks, and regular safety audits across all project sites.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Maintenance contracts available? <span class="plus"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#35676A" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+            <div class="faq-a">Yes. Flexible agreements with scheduled inspections and dedicated account management.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN (SIDEBAR) -->
+      <div class="sidebar-form">
+        <h3 style="font-size:20px;font-family:'DM Serif Display',Georgia,serif;color:#2C4949;margin:0 0 8px;font-weight:500">Get a Free Quote</h3>
+        <p style="color:#5F6B6B;font-size:13px;margin:0 0 20px">No obligation. Upfront pricing guaranteed.</p>
+        <form class="qf">
+          <input type="text" placeholder="Full name" required>
+          <input type="tel" placeholder="Phone" required>
+          <input type="email" placeholder="Email" required>
+          <select required>
+            <option>Select a service</option>
+            <option>Residential Plumbing</option>
+            <option>Commercial Plumbing</option>
+            <option selected>Industrial Plumbing</option>
+            <option>Blocked Drains</option>
+            <option>Hot Water Systems</option>
+            <option>Bathroom Renovations</option>
+            <option>Toilet Repairs</option>
+            <option>Plumbing Maintenance</option>
+            <option>Leaking Pipes</option>
+          </select>
+          <textarea placeholder="Tell us about your issue..."></textarea>
+          <button type="submit">Request a Quote</button>
+        </form>
+        <div class="sidebar-call">
+          <p style="color:#5F6B6B;font-size:13px;margin:0 0 8px">Or call us directly:</p>
+          <a href="tel:0404998448" class="sidebar-phone">0404 998 448</a>
+          <a href="tel:1300390232" class="sidebar-phone-alt">1300 390 232</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="label">Testimonials</div>
+      <h2 class="section-title md">What Our Clients Say</h2>
+      <div class="review-grid cols-6">
+        <div class="review-card">
+          <div class="stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p>Highly recommend. Great communication!</p>
+          <div class="author">Mathew L.</div>
+        </div>
+        <div class="review-card">
+          <div class="stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p>Prompt, professional and very fairly priced. Would absolutely use again.</p>
+          <div class="author">Sarah K.</div>
+        </div>
+        <div class="review-card">
+          <div class="stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p>Excellent service from start to finish. Upfront pricing, on-time arrival. Everything you want.</p>
+          <div class="author">James W.</div>
+        </div>
+        <div class="review-card">
+          <div class="stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p>Called about a burst pipe on a Saturday night. They were here within an hour.</p>
+          <div class="author">David M.</div>
+        </div>
+        <div class="review-card">
+          <div class="stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p>Respectful of our property, cleaned up after themselves, and the price was exactly as quoted.</p>
+          <div class="author">Rebecca T.</div>
+        </div>
+        <div class="review-card">
+          <div class="stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p>Had our hot water system replaced. Great advice, competitive price, done in half a day.</p>
+          <div class="author">Paul H.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED SERVICES -->
+  <section class="bg-light" style="padding:64px 5%">
+    <div style="max-width:1200px;margin:0 auto">
+      <h2 style="font-size:26px;font-family:'DM Serif Display',Georgia,serif;color:#2C4949;text-align:center;margin:0 0 32px;font-weight:500">Other Services</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+        <a href="residential-plumbing.html" class="areas-svc-card" style="background-image:url('https://apexplumbingprojects.com.au/wp-content/uploads/2026/03/Residential-Plumbing.png')"><h4>Residential Plumbing</h4></a>
+        <a href="commercial-plumbing.html" class="areas-svc-card" style="background-image:url('https://apexplumbingprojects.com.au/wp-content/uploads/2026/03/Commercial-Plumbing.png')"><h4>Commercial Plumbing</h4></a>
+        <a href="blocked-drains.html" class="areas-svc-card" style="background-image:url('https://apexplumbingprojects.com.au/wp-content/uploads/2026/03/Blocked-Drains.png')"><h4>Blocked Drains</h4></a>
+        <a href="hot-water-repairs.html" class="areas-svc-card" style="background-image:url('https://apexplumbingprojects.com.au/wp-content/uploads/2026/03/Hot-Water-Systems.png')"><h4>Hot Water Systems</h4></a>
+        <a href="bathroom-renovations.html" class="areas-svc-card" style="background-image:url('https://apexplumbingprojects.com.au/wp-content/uploads/2026/03/Bathroom-Renovations.png')"><h4>Bathroom Renovations</h4></a>
+        <a href="toilet-repairs.html" class="areas-svc-card" style="background-image:url('https://apexplumbingprojects.com.au/wp-content/uploads/2026/03/Toilet-Repairs.png')"><h4>Toilet Repairs</h4></a>
+        <a href="plumbing-maintenance.html" class="areas-svc-card" style="background-image:url('https://apexplumbingprojects.com.au/wp-content/uploads/2026/03/Plumbing-Maintenance.png')"><h4>Plumbing Maintenance</h4></a>
+        <a href="leaking-pipes.html" class="areas-svc-card" style="background-image:url('https://apexplumbingprojects.com.au/wp-content/uploads/2026/03/Leaking-Pipes.png')"><h4>Leaking Pipes</h4></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <h2>Need Industrial Plumbing?</h2>
+    <p>$0 call out. Available 24/7. Upfront pricing.</p>
+    <div class="cta-btns">
+      <a href="tel:0404998448" class="btn-copper">0404 998 448</a>
+      <a href="contact.html" class="btn-ghost">Request a Quote</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-accent"></div>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <img src="https://apexplumbingprojects.com.au/wp-content/uploads/2026/03/Apex-Logo.png" alt="Apex Plumbing Projects" class="footer-logo-img">
+          <p class="footer-desc">Trusted plumbing across Newcastle, Central Coast, Lake Macquarie and the Hunter. Proudly Indigenous-owned. Supply Nation certified.</p>
+        </div>
+        <div>
+          <div class="footer-heading">SERVICES</div>
+          <a href="residential-plumbing.html" class="footer-link">Residential Plumbing</a>
+          <a href="commercial-plumbing.html" class="footer-link">Commercial Plumbing</a>
+          <a href="industrial-plumbing.html" class="footer-link">Industrial Plumbing</a>
+          <a href="blocked-drains.html" class="footer-link">Blocked Drains</a>
+          <a href="hot-water-repairs.html" class="footer-link">Hot Water Systems</a>
+          <a href="bathroom-renovations.html" class="footer-link">Bathroom Renovations</a>
+          <a href="toilet-repairs.html" class="footer-link">Toilet Repairs</a>
+          <a href="plumbing-maintenance.html" class="footer-link">Plumbing Maintenance</a>
+          <a href="leaking-pipes.html" class="footer-link">Leaking Pipes</a>
+        </div>
+        <div>
+          <div class="footer-heading">AREAS</div>
+          <span class="footer-link">Newcastle</span>
+          <span class="footer-link">Central Coast</span>
+          <span class="footer-link">Lake Macquarie</span>
+          <span class="footer-link">Hunter Valley</span>
+          <span class="footer-link">Gosford</span>
+          <span class="footer-link">Wyong</span>
+          <span class="footer-link">Tuggerah</span>
+          <span class="footer-link">Morisset</span>
+        </div>
+        <div>
+          <div class="footer-heading">CONTACT</div>
+          <a href="tel:0404998448" class="footer-phone">0404 998 448</a>
+          <a href="tel:1300390232" class="footer-phone-alt">1300 390 232</a>
+          <div class="footer-email">admin@apexplumbingprojects.com</div>
+          <div class="footer-addr">9/61 Gateway Boulevard, Morisset NSW</div>
+          <div class="footer-hours">Mon-Fri 6am-6pm / 24/7 Emergency</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2026 Apex Plumbing Projects</span>
+        <span class="footer-credit">Website by <span>JRNY Digital</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+// Mobile nav toggle
+document.addEventListener('DOMContentLoaded', function() {
+  var toggle = document.querySelector('.mob-toggle');
+  var menu = document.querySelector('.mob-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', function() {
+      menu.classList.toggle('open');
+    });
+  }
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var answer = this.nextElementSibling;
+      var wasOpen = this.classList.contains('open');
+      // Close all in same FAQ group
+      var parent = this.closest('.faq-list');
+      if (parent) {
+        parent.querySelectorAll('.faq-q').forEach(function(q) { q.classList.remove('open'); });
+        parent.querySelectorAll('.faq-a').forEach(function(a) { a.classList.remove('open'); });
+      }
+      if (!wasOpen) {
+        this.classList.add('open');
+        answer.classList.add('open');
+      }
+    });
+  });
+});
+
+</script>
+</body>
+</html>
