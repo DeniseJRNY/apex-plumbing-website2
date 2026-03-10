@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Plumbing Projects | Newcastle, Central Coast &amp; Hunter Valley</title>
+  <meta name="description" content="Trusted plumbing across Newcastle, Central Coast, Lake Macquarie and the Hunter Valley. Proudly Indigenous-owned. $0 call out fee. 24/7 emergency service.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --teal: #35676A;
+  --dark: #2C4949;
+  --deep: #054D42;
+  --lt-teal: #69ADB6;
+  --copper: #35676A;
+  --gold: #D7B791;
+  --cream: #F5EEDC;
+  --bg: #FAFAF7;
+  --white: #FFFFFF;
+  --tx: #1A1A1A;
+  --mu: #5F6B6B;
+  --bd: #DDE3E0;
+  --lt: #F0F4F2;
+}
+
+* { box-sizing: border-box; margin: 0; }
+::selection { background: #35676A; color: #fff; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bg);
+  min-height: 100vh;
+  color: var(--tx);
+}
+
+a { text-decoration: none; }
+
+/* TOP BAR */
+.top-bar {
+  background: var(--dark);
+  padding: 8px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11.5px;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.8px;
+}
+.top-bar a { color: #fff; font-weight: 600; text-decoration: none; }
+
+/* NAV */
+nav.main-nav {
+  background: var(--white);
+  padding: 0 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--bd);
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 96px;
+}
+.logo { display: flex; align-items: center; text-decoration: none; }
+.logo-img { height: 80px; width: auto; }
+.footer-logo-img { height: 64px; width: auto; margin-bottom: 16px; }
+.nav-links { display: flex; align-items: center; gap: 32px; }
+.nav-link { color: var(--tx); cursor: pointer; font-size: 13px; font-weight: 500; letter-spacing: 0.3px; text-decoration: none; }
+.nav-link:hover, .nav-link.active { color: var(--teal); }
+.nav-phone {
+  background: var(--teal);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* SERVICES DROPDOWN */
+.svc-dropdown { position: relative; padding: 10px 0; }
+.svc-dropdown-btn {
+  color: var(--tx);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+.svc-dropdown-btn:hover, .svc-dropdown-btn.active { color: var(--teal); }
+.svc-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  padding-top: 4px;
+  z-index: 200;
+}
+.svc-dropdown:hover .svc-dropdown-menu { display: block; }
+.svc-dropdown-inner {
+  background: var(--white);
+  border: 1px solid var(--bd);
+  border-radius: 6px;
+  padding: 6px 0;
+  min-width: 220px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+.svc-dropdown-inner a {
+  display: block;
+  padding: 9px 20px;
+  color: var(--tx);
+  font-size: 13px;
+  text-decoration: none;
+}
+.svc-dropdown-inner a:hover { background: var(--lt); color: var(--lt-teal); }
+
+/* MOBILE NAV */
+.mob-toggle {
+  display: none;
+  cursor: pointer;
+  padding: 8px;
+  background: none;
+  border: none;
+}
+.mob-toggle span {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: var(--dark);
+  margin: 4px 0;
+}
+.mob-menu {
+  display: none;
+  padding: 12px 0;
+  border-top: 1px solid var(--bd);
+}
+.mob-menu.open { display: block; }
+.mob-menu a {
+  display: block;
+  padding: 10px 0;
+  color: var(--tx);
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.mob-menu .mob-svc-link {
+  padding: 7px 0;
+  color: var(--mu);
+  font-size: 13px;
+}
+.mob-menu .mob-divider { height: 1px; background: var(--bd); margin: 6px 0; }
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+.hero-bg {
+  position: absolute !important;
+  inset: 0;
+  overflow: hidden;
+  background: url('https://apexplumbingprojects.com.au/wp-content/uploads/2026/03/hero.png') center/cover no-repeat !important;
+}
+.hero-bg svg {
+  display: none;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(44,73,73,0.88), rgba(44,73,73,0.35));
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+}
+.hero-content { max-width: 1200px; margin: 0 auto; width: 100%; }
+.hero h1 {
+  color: #fff;
+  font-size: 50px;
+  font-family: 'DM Serif Display', Georgia, serif;
+  line-height: 1.1;
+  margin: 0 0 20px;
+  font-weight: 500;
+  max-width: 540px;
+}
+.hero p {
+  color: rgba(255,255,255,0.6);
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 0 32px;
+  max-width: 540px;
+}
+.hero-btns { display: flex; gap: 12px; }
+.btn-primary {
+  background: var(--copper);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 14px 36px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-outline {
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 3px;
+  padding: 14px 28px;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+}
+.btn-outline-dark {
+  border: 2px solid var(--deep);
+  color: var(--deep);
+  border-radius: 6px;
+  padding: 14px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: none;
+  text-decoration: none;
+  display: inline-block;
+  align-self: flex-start;
+  transition: all 0.3s;
+}
+.btn-outline-dark:hover {
+  background: var(--deep);
+  color: #fff;
+}
+
+/* PAGE HERO (smaller) */
+.page-hero {
+  position: relative;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+}
+.page-hero.small { min-height: 320px; }
+.page-hero-dark {
+  background: var(--dark);
+  padding: 64px 5%;
+}
+
+/* PHOTO BG SCENES */
+.photo-bg { min-height: 400px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.photo-bg.hero-scene { min-height: 520px; }
+.photo-bg.team-scene { background: linear-gradient(135deg, #2C4949 0%, #054D42 60%, #1C3535 100%); }
+.photo-bg.work-scene { background: linear-gradient(135deg, #054D42 0%, #1A3838 50%, #2C4949 100%); }
+.photo-bg.bathroom-scene { background: linear-gradient(135deg, #2C4949 0%, #054D42 40%, #1A3838 100%); min-height: 500px; }
+.photo-bg.service-scene { background: linear-gradient(135deg, #054D42 0%, #2C4949 50%, #1C3535 100%); min-height: 320px; }
+.photo-bg svg.scene-svg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.8; }
+
+/* STATS BAR */
+.stats-bar {
+  background: var(--white);
+  border-bottom: 1px solid var(--bd);
+}
+.stats-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.stat {
+  text-align: center;
+  padding: 28px 16px;
+  border-right: 1px solid var(--bd);
+}
+.stat:last-child { border-right: none; }
+.stat-value {
+  color: var(--teal);
+  font-size: 26px;
+  font-weight: 600;
+  font-family: 'DM Serif Display', Georgia, serif;
+}
+.stat-label { color: var(--mu); font-size: 11px; margin-top: 2px; }
+
+/* SECTION LABEL */
+.label {
+  color: var(--copper);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.label.dark { color: var(--gold); }
+
+/* SECTIONS */
+.section { padding: 80px 5%; }
+.section .container { max-width: 1200px; margin: 0 auto; }
+.section-title {
+  font-size: 44px;
+  font-family: 'DM Serif Display', Georgia, serif;
+  color: var(--dark);
+  margin: 0 0 16px;
+  font-weight: 500;
+}
+.section-title.sm { font-size: 38px; }
+.section-title.md { font-size: 40px; }
+.section-subtitle {
+  color: var(--mu);
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+/* SERVICE GRID */
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--bd);
+}
+.svc-card {
+  background: var(--white);
+  padding: 32px 28px;
+  cursor: pointer;
+  transition: all 0.25s;
+  text-decoration: none;
+  display: block;
+}
+.svc-card:hover { background: var(--lt); }
+.svc-card h3 { font-size: 15px; color: var(--dark); margin: 0 0 6px; font-weight: 600; }
+.svc-card p { color: var(--mu); font-size: 13px; margin: 0 0 14px; line-height: 1.5; }
+.svc-card .learn-more {
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* IMAGE SERVICE CARDS */
+.svc-grid-images {
+  gap: 16px;
+  background: none;
+}
+.svc-grid-images .svc-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 260px;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--dark);
+  padding: 0;
+  transition: transform 0.3s;
+}
+.svc-grid-images .svc-card:hover {
+  background-color: var(--dark);
+  transform: scale(1.02);
+}
+.svc-grid-images .svc-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(5,77,66,0.85) 0%, rgba(5,77,66,0.3) 45%, transparent 100%);
+  border-radius: 10px;
+}
+.svc-grid-images .svc-card h3 {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 36px;
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-weight: 400;
+  padding: 24px 28px;
+  margin: 0;
+}
+.svc-grid-images .svc-card p,
+.svc-grid-images .svc-card .learn-more {
+  display: none;
+}
+
+/* FEATURED SERVICE CARDS */
+.svc-featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 28px;
+}
+.svc-featured {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--dark);
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+.svc-featured:hover { transform: scale(1.02); }
+.svc-featured::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(5,77,66,0.9) 0%, rgba(5,77,66,0.5) 40%, rgba(5,77,66,0.1) 70%, transparent 100%);
+  border-radius: 10px;
+}
+.svc-featured-content {
+  position: relative;
+  z-index: 1;
+  padding: 28px;
+}
+.svc-featured-content h3 {
+  color: #fff;
+  font-size: 32px;
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-weight: 400;
+  margin: 0 0 8px;
+}
+.svc-featured-content p {
+  color: rgba(255,255,255,0.75);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+.svc-featured-cta {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s;
+}
+.svc-featured:hover .svc-featured-cta { gap: 10px; }
+
+/* ICON SERVICE CARDS */
+.svc-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--bd);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.svc-icon-card {
+  background: var(--white);
+  padding: 32px 28px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.25s;
+}
+.svc-icon-card:hover { background: var(--lt); }
+.svc-icon-card:last-child:nth-child(3n+1) { grid-column: 2; }
+.svc-icon-card .svc-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(53,103,106,0.08);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.svc-icon-card .svc-icon svg { width: 22px; height: 22px; }
+.svc-icon-card h3 { font-size: 15px; color: var(--dark); margin: 0 0 6px; font-weight: 600; }
+.svc-icon-card p { color: var(--mu); font-size: 13px; margin: 0 0 14px; line-height: 1.5; }
+.svc-icon-card .learn-more {
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.2s;
+}
+.svc-icon-card:hover .learn-more { gap: 8px; }
+
+/* ABOUT SPLIT */
+.split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.split-content {
+  padding: 64px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.features-mini {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 24px 0 32px;
+}
+.feature-mini {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: var(--bg);
+  border-radius: 10px;
+  padding: 18px 20px;
+  border: 1px solid var(--bd);
+}
+.feature-mini .chk {
+  margin-top: 2px;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  background: rgba(166,108,68,0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.feature-mini .chk svg { width: 16px; height: 16px; }
+.feature-mini h4 { color: var(--dark); font-size: 16px; font-weight: 700; margin: 0 0 4px; }
+.feature-mini p { color: var(--mu); font-size: 13px; margin: 0; line-height: 1.5; }
+
+/* REVIEWS */
+.review-grid {
+  display: grid;
+  gap: 20px;
+}
+.review-grid.cols-6 { grid-template-columns: repeat(3, 1fr); }
+.review-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.review-card {
+  padding: 26px 22px;
+  border: 1px solid var(--bd);
+  border-radius: 4px;
+  background: var(--white);
+}
+.stars { display: flex; gap: 2px; margin-bottom: 12px; }
+.review-card p { color: var(--tx); font-size: 14px; line-height: 1.6; margin: 0 0 14px; }
+.review-card .author { color: var(--mu); font-size: 12px; font-weight: 600; }
+
+/* AREA SECTION */
+.areas-section {
+  background: var(--dark);
+  padding: 80px 5%;
+  position: relative;
+  overflow: hidden;
+}
+.areas-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.areas-text .label.dark { color: var(--gold); }
+.areas-text h2 {
+  font-size: 42px;
+  font-family: 'DM Serif Display', Georgia, serif;
+  color: #fff;
+  margin: 0 0 20px;
+  font-weight: 500;
+}
+.areas-text p {
+  color: rgba(255,255,255,0.7);
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0 0 32px;
+  max-width: 480px;
+}
+.areas-text .area-cta {
+  display: inline-block;
+  padding: 18px 40px;
+  background: var(--copper);
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.areas-text .area-cta:hover { background: #2C5558; }
+.areas-map {
+  position: relative;
+}
+.areas-map svg { width: 100%; height: auto; display: block; }
+.map-pin { cursor: pointer; }
+.map-pin-dot { transition: fill 0.3s, stroke-width 0.3s; }
+.map-pin:hover .map-pin-dot { fill: #fff; stroke: var(--copper); stroke-width: 2.5; }
+.map-pin-label {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  fill: #fff;
+  pointer-events: none;
+}
+.map-pin-label-bg {
+  fill: rgba(5,77,66,0.85);
+  rx: 4;
+  ry: 4;
+  pointer-events: none;
+  transition: fill 0.3s;
+}
+.map-pin:hover .map-pin-label-bg { fill: rgba(166,108,68,0.9); }
+
+/* CTA BAND */
+.cta-band {
+  background: url('https://apexplumbingprojects.com.au/wp-content/uploads/2026/03/1.png') center/cover no-repeat;
+  padding: 72px 5%;
+  text-align: center;
+  position: relative;
+}
+.cta-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+}
+.cta-band > * { position: relative; z-index: 1; }
+.cta-band h2 {
+  color: #fff;
+  font-size: 42px;
+  font-family: 'DM Serif Display', Georgia, serif;
+  margin: 0 0 14px;
+  font-weight: 500;
+}
+.cta-band p { color: rgba(255,255,255,0.5); font-size: 18px; margin: 0 0 32px; }
+.cta-band .cta-btns { display: flex; gap: 12px; justify-content: center; }
+.cta-band .btn-copper {
+  background: var(--copper);
+  color: #fff;
+  padding: 20px 56px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.cta-band .btn-copper:hover { background: #2C5558; }
+.cta-band .btn-ghost {
+  border: 2px solid rgba(255,255,255,0.35);
+  color: #fff;
+  padding: 18px 56px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.cta-band .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+.cta-band .btn-white {
+  background: var(--white);
+  color: var(--dark);
+  padding: 14px 40px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* WHY CHOOSE */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.why-card {
+  padding: 36px 28px;
+  border: 1px solid var(--bd);
+  border-radius: 4px;
+}
+.why-card h3 { font-size: 16px; color: var(--dark); margin: 0 0 10px; font-weight: 600; }
+.why-card p { color: var(--mu); font-size: 13px; line-height: 1.7; margin: 0; }
+
+/* PROCESS STEPS */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.process-card {
+  padding: 28px 22px;
+  border: 1px solid var(--bd);
+  border-radius: 4px;
+  background: var(--white);
+  border-top: 3px solid var(--copper);
+}
+.process-num {
+  color: var(--copper);
+  font-size: 28px;
+  font-weight: 300;
+  font-family: 'DM Serif Display', Georgia, serif;
+  margin-bottom: 10px;
+}
+.process-card h3 { color: var(--dark); font-size: 14px; margin: 0 0 6px; font-weight: 600; }
+.process-card p { color: var(--mu); font-size: 12px; line-height: 1.6; margin: 0; }
+
+/* FAQ */
+.faq-item { border-bottom: 1px solid var(--bd); }
+.faq-q {
+  padding: 18px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: var(--tx);
+  font-size: 15px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+}
+.faq-q .plus { flex-shrink: 0; margin-left: 16px; transition: transform 0.2s; }
+.faq-q.open .plus { transform: rotate(45deg); }
+.faq-a {
+  display: none;
+  padding-bottom: 18px;
+  color: var(--mu);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.faq-a.open { display: block; }
+
+/* QUOTE FORM */
+.qf { display: flex; flex-direction: column; gap: 12px; }
+.qf input, .qf select, .qf textarea {
+  width: 100%;
+  padding: 13px 16px;
+  background: var(--white);
+  border: 1px solid var(--bd);
+  border-radius: 3px;
+  color: var(--tx);
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+}
+.qf select { color: var(--mu); }
+.qf textarea { min-height: 80px; resize: vertical; }
+.qf .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.qf button {
+  background: var(--copper);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* CONTACT CARDS */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--bd);
+  margin-bottom: 48px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.contact-card {
+  background: var(--white);
+  padding: 24px 22px;
+}
+.contact-card .card-label {
+  color: var(--mu);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+.contact-card a { color: var(--dark); font-size: 13px; font-weight: 600; text-decoration: none; word-break: break-all; display: block; }
+.contact-card .card-sub { color: var(--mu); font-size: 11px; margin-top: 4px; }
+.contact-card .card-value { color: var(--dark); font-size: 13px; font-weight: 600; }
+
+/* CONTENT GRID */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+.content-grid.sidebar {
+  grid-template-columns: 1fr 380px;
+  gap: 56px;
+}
+
+/* SIDEBAR FORM */
+.sidebar-form {
+  background: var(--white);
+  border: 1px solid var(--bd);
+  border-radius: 4px;
+  padding: 28px;
+  position: sticky;
+  top: 100px;
+}
+.sidebar-form h3 { font-size: 16px; color: var(--dark); margin: 0 0 4px; font-weight: 600; }
+.sidebar-form .form-sub { color: var(--mu); font-size: 12px; margin: 0 0 20px; }
+.sidebar-form .call-info { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--bd); }
+.sidebar-form .call-info .call-label { color: var(--mu); font-size: 11px; margin-bottom: 8px; }
+.sidebar-form .call-info a { display: block; text-decoration: none; }
+.sidebar-form .call-info .phone-main { color: var(--dark); font-size: 15px; font-weight: 600; }
+.sidebar-form .call-info .phone-alt { color: var(--mu); font-size: 13px; margin-top: 2px; }
+
+/* SERVICE PAGE */
+.breadcrumb { color: rgba(255,255,255,0.3); font-size: 12px; margin-bottom: 16px; }
+.breadcrumb a { color: rgba(255,255,255,0.3); text-decoration: none; }
+.breadcrumb .current { color: rgba(255,255,255,0.6); }
+.hero-badges { display: flex; gap: 20px; flex-wrap: wrap; }
+.hero-badge { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.55); font-size: 12px; }
+.svc-desc { color: var(--mu); font-size: 15px; line-height: 1.8; margin-bottom: 12px; }
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--white);
+  border-radius: 3px;
+  border: 1px solid var(--bd);
+}
+.feature-item span { color: var(--tx); font-size: 13px; }
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--bd);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.related-card {
+  background: var(--white);
+  padding: 28px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: block;
+}
+.related-card:hover { background: var(--lt); }
+.related-card h3 { color: var(--dark); font-size: 14px; margin: 0 0 4px; font-weight: 600; }
+.related-card p { color: var(--mu); font-size: 12px; margin: 0 0 10px; line-height: 1.5; }
+.related-card .learn { color: var(--teal); font-size: 12px; font-weight: 600; }
+
+/* WHAT HAPPENS NEXT */
+.next-steps {
+  background: var(--white);
+  border: 1px solid var(--bd);
+  border-radius: 4px;
+  padding: 24px;
+}
+.next-steps h3 { font-size: 15px; color: var(--dark); margin: 0 0 10px; font-weight: 600; }
+.next-step { display: flex; gap: 10px; margin-bottom: 12px; align-items: flex-start; }
+.next-step:last-child { margin-bottom: 0; }
+.next-step .chk { margin-top: 3px; flex-shrink: 0; }
+.next-step h4 { color: var(--dark); font-size: 13px; font-weight: 600; margin: 0; }
+.next-step p { color: var(--mu); font-size: 12px; line-height: 1.5; margin: 0; }
+
+/* ABOUT BADGE */
+.about-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--bd);
+  border-radius: 3px;
+  padding: 7px 14px;
+  margin-bottom: 28px;
+}
+.about-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); }
+.about-badge span { color: var(--mu); font-size: 12px; letter-spacing: 1px; }
+
+/* AREAS MAP */
+.areas-map {
+  background: #2C4949;
+  min-height: 300px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.contact-map {
+  background: #2C4949;
+  min-height: 300px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.regions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--bd);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.region-card {
+  background: var(--white);
+  padding: 24px 20px;
+}
+.region-card h4 { color: var(--dark); font-size: 14px; margin: 0 0 8px; font-weight: 600; }
+.region-card p { color: var(--mu); font-size: 12px; line-height: 1.6; margin: 0; }
+
+/* FOOTER */
+footer {
+  background: var(--deep);
+}
+.footer-accent {
+  height: 3px;
+  background: linear-gradient(90deg, var(--copper), var(--gold), var(--copper));
+}
+.footer-inner {
+  padding: 64px 5% 0;
+}
+.footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  padding-bottom: 48px;
+}
+.footer-brand { color: #fff; font-weight: 700; font-size: 15px; font-family: 'DM Serif Display', Georgia, serif; letter-spacing: 2px; margin-bottom: 14px; }
+.footer-desc { color: rgba(255,255,255,0.35); font-size: 13px; line-height: 1.7; margin: 0 0 14px; max-width: 280px; }
+.footer-heading { color: rgba(255,255,255,0.25); font-size: 10px; letter-spacing: 2px; margin-bottom: 12px; font-weight: 600; }
+.footer-link { color: rgba(255,255,255,0.45); font-size: 12px; padding: 4px 0; display: block; text-decoration: none; }
+.footer-link:hover { color: rgba(255,255,255,0.7); }
+.footer-phone { color: #fff; font-size: 15px; font-weight: 600; text-decoration: none; display: block; margin-bottom: 4px; }
+.footer-phone-alt { color: rgba(255,255,255,0.5); font-size: 13px; text-decoration: none; display: block; margin-bottom: 12px; }
+.footer-email { color: rgba(255,255,255,0.35); font-size: 12px; }
+.footer-addr { color: rgba(255,255,255,0.3); font-size: 12px; margin-top: 8px; }
+.footer-hours { color: rgba(255,255,255,0.25); font-size: 11px; margin-top: 4px; }
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-copy { color: rgba(255,255,255,0.2); font-size: 11px; }
+.footer-credit { color: rgba(255,255,255,0.2); font-size: 11px; }
+.footer-credit span { color: #FFC500; }
+
+/* SERVICE PAGE HERO */
+.service-hero {
+  position: relative;
+  min-height: 320px;
+}
+.service-hero-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.service-hero-bg svg.scene-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+.service-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(44,73,73,0.88), rgba(44,73,73,0.3));
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+}
+.service-hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+.service-hero h1 {
+  color: #fff;
+  font-size: 40px;
+  font-family: 'DM Serif Display', Georgia, serif;
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+.service-hero p {
+  color: rgba(255,255,255,0.5);
+  font-size: 14px;
+  margin: 0 0 24px;
+  max-width: 520px;
+}
+.service-badges {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.service-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.55);
+  font-size: 12px;
+}
+
+/* SIDEBAR EXTRAS */
+.sidebar-call {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--bd);
+}
+.sidebar-phone {
+  color: var(--dark);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+}
+.sidebar-phone-alt {
+  color: var(--mu);
+  font-size: 13px;
+  text-decoration: none;
+  display: block;
+  margin-top: 2px;
+}
+
+/* PROCESS CARD NUM (alternate class) */
+.process-card-num {
+  color: var(--copper);
+  font-size: 22px;
+  font-weight: 300;
+  font-family: 'DM Serif Display', Georgia, serif;
+  margin-bottom: 8px;
+}
+
+/* SERVICE GRID (3 cols variant) */
+.svc-grid.three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* REVIEW GRID default */
+.review-grid:not(.cols-6):not(.cols-3) {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* SVG ICONS */
+.icon-chk, .icon-arr, .icon-star, .icon-plus { display: inline-block; vertical-align: middle; }
+
+/* BACKGROUNDS */
+.bg-white { background: var(--white); }
+.bg-cream { background: var(--cream); }
+.bg-light { background: var(--bg); }
+.bg-dark { background: var(--dark); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links { display: none !important; }
+  .mob-toggle { display: block !important; }
+  h1 { font-size: 30px !important; }
+  .hero { min-height: 400px; }
+  .stats-grid { grid-template-columns: repeat(3, 1fr); }
+  .stat:nth-child(4), .stat:nth-child(5) { border-top: 1px solid var(--bd); }
+  .svc-grid { grid-template-columns: 1fr; }
+  .svc-grid-images .svc-card { min-height: 200px; }
+  .svc-featured-grid { grid-template-columns: repeat(2, 1fr); }
+  .svc-featured { min-height: 280px; }
+  .svc-featured-content h3 { font-size: 26px; }
+  .svc-icon-grid { grid-template-columns: repeat(2, 1fr); }
+  .split-grid { grid-template-columns: 1fr; }
+  .split-content { padding: 40px 20px; }
+  .review-grid.cols-6, .review-grid.cols-3 { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: 1fr 1fr; }
+  .content-grid { grid-template-columns: 1fr; }
+  .content-grid.sidebar { grid-template-columns: 1fr; }
+  .sidebar-form { position: static; }
+  .contact-grid { grid-template-columns: 1fr 1fr; }
+  .features-grid { grid-template-columns: 1fr; }
+  .features-mini { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .regions-grid { grid-template-columns: 1fr 1fr; }
+  .related-grid { grid-template-columns: 1fr; }
+  .hero-btns { flex-direction: column; }
+  .cta-band .cta-btns { flex-direction: column; align-items: center; }
+  .top-bar { flex-direction: column; gap: 4px; text-align: center; }
+  .hero-badges { flex-direction: column; gap: 8px; }
+  .service-badges { flex-direction: column; gap: 8px; }
+  .service-hero { min-height: 260px; }
+  .svc-grid.three { grid-template-columns: 1fr; }
+  .areas-inner { grid-template-columns: 1fr; gap: 32px; }
+  .areas-text { text-align: center; }
+  .areas-text p { max-width: 100%; }
+  .area-tags { min-height: auto; padding: 20px; }
+  .areas-map { min-height: auto; }
+  .section { padding: 48px 5%; }
+  .page-hero { min-height: 260px; }
+}
+
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .svc-featured-grid { grid-template-columns: 1fr; }
+  .svc-featured { min-height: 260px; }
+  .svc-icon-grid { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .regions-grid { grid-template-columns: 1fr; }
+  .qf .row { grid-template-columns: 1fr; }
+}
+
+</style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <span>Proudly Indigenous-Owned &middot; Master Plumbers</span>
+    <span>24/7 Emergency &middot; <a href="tel:0404998448">0404 998 448</a></span>
+  </div>
+
+  <!-- NAV -->
+  <nav class="main-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <img src="https://apexplumbingprojects.com.au/wp-content/uploads/2026/03/Apex-Logo.png" alt="Apex Plumbing Projects" class="logo-img">
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="areas.html" class="nav-link">Areas</a>
+        <div class="svc-dropdown">
+          <button class="svc-dropdown-btn">Services <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="svc-dropdown-menu">
+            <div class="svc-dropdown-inner">
+              <a href="residential-plumbing.html">Residential Plumbing</a>
+              <a href="commercial-plumbing.html">Commercial Plumbing</a>
+              <a href="industrial-plumbing.html">Industrial Plumbing</a>
+              <a href="blocked-drains.html">Blocked Drains</a>
+              <a href="hot-water-repairs.html">Hot Water Systems</a>
+              <a href="bathroom-renovations.html">Bathroom Renovations</a>
+              <a href="toilet-repairs.html">Toilet Repairs</a>
+              <a href="plumbing-maintenance.html">Plumbing Maintenance</a>
+              <a href="leaking-pipes.html">Leaking Pipes</a>
+              <a href="water-filtration.html">Water Filtration Systems</a>
+            </div>
+          </div>
+        </div>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="tel:0404998448" class="nav-phone">0404 998 448</a>
+      </div>
+      <button class="mob-toggle"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mob-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="areas.html">Areas We Service</a>
+      <a href="contact.html">Contact</a>
+      <div class="mob-divider"></div>
+      <a href="residential-plumbing.html" class="mob-svc-link">Residential Plumbing</a>
+      <a href="commercial-plumbing.html" class="mob-svc-link">Commercial Plumbing</a>
+      <a href="industrial-plumbing.html" class="mob-svc-link">Industrial Plumbing</a>
+      <a href="blocked-drains.html" class="mob-svc-link">Blocked Drains</a>
+      <a href="hot-water-repairs.html" class="mob-svc-link">Hot Water Systems</a>
+      <a href="bathroom-renovations.html" class="mob-svc-link">Bathroom Renovations</a>
+      <a href="toilet-repairs.html" class="mob-svc-link">Toilet Repairs</a>
+      <a href="plumbing-maintenance.html" class="mob-svc-link">Plumbing Maintenance</a>
+      <a href="leaking-pipes.html" class="mob-svc-link">Leaking Pipes</a>
+      <a href="water-filtration.html" class="mob-svc-link">Water Filtration Systems</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg photo-bg hero-scene">
+      <svg viewBox="0 0 400 280" preserveAspectRatio="xMidYMid slice" class="scene-svg">
+        <rect x="60" y="80" width="280" height="160" rx="8" fill="rgba(53,103,106,0.06)" stroke="rgba(53,103,106,0.12)" stroke-width="1"/>
+        <circle cx="200" cy="130" r="35" fill="none" stroke="rgba(53,103,106,0.15)" stroke-width="1.5"/>
+        <path d="M200 100 C200 100 182 118 182 130 a18 18 0 0036 0 c0-12-18-30-18-30z" fill="rgba(53,103,106,0.12)"/>
+        <path d="M200 115 C200 115 192 123 192 129 a8 8 0 0016 0 c0-6-8-14-8-14z" fill="rgba(166,108,68,0.2)"/>
+        <line x1="100" y1="180" x2="170" y2="180" stroke="rgba(255,255,255,0.06)" stroke-width="8"/>
+        <line x1="100" y1="200" x2="240" y2="200" stroke="rgba(255,255,255,0.04)" stroke-width="8"/>
+        <line x1="100" y1="220" x2="200" y2="220" stroke="rgba(255,255,255,0.03)" stroke-width="8"/>
+        <circle cx="320" cy="60" r="80" fill="rgba(105,173,182,0.03)"/>
+        <circle cx="50" cy="200" r="60" fill="rgba(53,103,106,0.03)"/>
+      </svg>
+    </div>
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Your Trusted Partner for Plumbing Solutions</h1>
+        <p>Expert residential, commercial and industrial plumbing across Newcastle, Central Coast, Lake Macquarie and the Hunter Valley.</p>
+        <div class="hero-btns">
+          <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+          <a href="tel:0404998448" class="btn-outline">0404 998 448</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-bar">
+    <div class="stats-grid">
+      <div class="stat"><div class="stat-value">24/7</div><div class="stat-label">Emergency</div></div>
+      <div class="stat"><div class="stat-value">$0</div><div class="stat-label">Call Out</div></div>
+      <div class="stat"><div class="stat-value">12+</div><div class="stat-label">Team</div></div>
+      <div class="stat"><div class="stat-value">5.0</div><div class="stat-label">Rating</div></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="label">Our Services</div>
+      <h2 class="section-title">What We Do</h2>
+      <p class="section-subtitle">Comprehensive plumbing solutions for homes, businesses, and industrial facilities. All backed by our lifetime workmanship guarantee.</p>
+      <!-- FEATURED SERVICES -->
+      <div class="svc-featured-grid">
+        <a href="residential-plumbing.html" class="svc-featured" style="background-image:url('https://apexplumbingprojects.com.au/wp-content/uploads/2026/03/Residential-Plumbing.png')">
+          <div class="svc-featured-content">
+            <h3>Residential Plumbing</h3>
+            <p>Complete home plumbing from repairs and installations to full renovations.</p>
+            <span class="svc-featured-cta">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </div>
+        </a>
+        <a href="plumbing-maintenance.html" class="svc-featured" style="background-image:url('https://apexplumbingprojects.com.au/wp-content/uploads/2026/03/Plumbing-Maintenance.png')">
+          <div class="svc-featured-content">
+            <h3>Plumbing Maintenance</h3>
+            <p>Scheduled inspections and preventative maintenance plans for peace of mind.</p>
+            <span class="svc-featured-cta">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </div>
+        </a>
+        <a href="commercial-plumbing.html" class="svc-featured" style="background-image:url('https://apexplumbingprojects.com.au/wp-content/uploads/2026/03/Commercial-Plumbing.png')">
+          <div class="svc-featured-content">
+            <h3>Commercial Plumbing</h3>
+            <p>Scalable solutions for offices, retail, hospitality, and strata properties.</p>
+            <span class="svc-featured-cta">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- SPECIFIC SERVICES -->
+      <div class="svc-icon-grid">
+        <a href="blocked-drains.html" class="svc-icon-card">
+          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#35676A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h18"/><path d="M6 4v2a8 8 0 0 0 4 6.93V22h4V12.93A8 8 0 0 0 18 6V4"/></svg></div>
+          <h3>Blocked Drains</h3>
+          <p>Fast diagnosis and clearing using CCTV and jet blasting.</p>
+          <span class="learn-more">Learn More <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a href="hot-water-repairs.html" class="svc-icon-card">
+          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#35676A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c0 4-4 6-4 10a4 4 0 0 0 8 0c0-4-4-6-4-10z"/><path d="M12 18v2"/></svg></div>
+          <h3>Hot Water Systems</h3>
+          <p>Supply, install, and repair gas, electric, heat pump, and solar hot water.</p>
+          <span class="learn-more">Learn More <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a href="bathroom-renovations.html" class="svc-icon-card">
+          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#35676A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16a1 1 0 0 1 1 1v2a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-2a1 1 0 0 1 1-1z"/><path d="M6 12V5a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v1"/></svg></div>
+          <h3>Bathroom Renovations</h3>
+          <p>End-to-end bathroom plumbing for renovations, from rough-in to fit-off.</p>
+          <span class="learn-more">Learn More <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a href="toilet-repairs.html" class="svc-icon-card">
+          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#35676A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <h3>Toilet Repairs</h3>
+          <p>Cistern repairs, replacements, and new installations. Same-day service.</p>
+          <span class="learn-more">Learn More <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a href="industrial-plumbing.html" class="svc-icon-card">
+          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#35676A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8l5-6 5 6v12"/><path d="M10 2v4"/><path d="M15 20V12l5-4v12"/></svg></div>
+          <h3>Industrial Plumbing</h3>
+          <p>Heavy-duty plumbing for factories, warehouses, and large-scale facilities.</p>
+          <span class="learn-more">Learn More <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a href="leaking-pipes.html" class="svc-icon-card">
+          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#35676A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+          <h3>Leaking Pipes</h3>
+          <p>Emergency leak detection and repair to prevent water damage to your property.</p>
+          <span class="learn-more">Learn More <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+        <a href="water-filtration.html" class="svc-icon-card">
+          <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#35676A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <h3>Water Filtration Systems</h3>
+          <p>Whole-home and under-sink filtration for clean, safe drinking water.</p>
+          <span class="learn-more">Learn More <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SPLIT -->
+  <section class="bg-white">
+    <div class="split-grid">
+      <div class="photo-bg bathroom-scene" style="background:url('https://apexplumbingprojects.com.au/wp-content/uploads/2026/03/P1009304-2-1-scaled.jpg') center/cover no-repeat;">
+      </div>
+      <div class="split-content">
+        <div class="label">About Apex</div>
+        <h2 style="font-size:40px;font-family:'DM Serif Display',Georgia,serif;color:#2C4949;margin:0 0 24px;font-weight:500">Built on Trust, Delivered with Expertise</h2>
+        <p style="color:#5F6B6B;font-size:17px;line-height:1.8;margin:0 0 18px">Apex Plumbing Projects is a proud Indigenous-owned, full-service plumbing company. We focus on quality workmanship, clear communication, and getting the job done right the first time.</p>
+        <p style="color:#5F6B6B;font-size:17px;line-height:1.8;margin:0 0 14px">No vague quotes. No surprise invoices. Honest recommendations from 12 experienced master plumbers.</p>
+        <div class="features-mini">
+          <div class="feature-mini">
+            <div class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A66C44" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div><h4>Upfront Pricing</h4><p>Fixed quotes. No hidden fees.</p></div>
+          </div>
+          <div class="feature-mini">
+            <div class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A66C44" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div><h4>$0 Call Out Fee</h4><p>Across our entire service area.</p></div>
+          </div>
+          <div class="feature-mini">
+            <div class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A66C44" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div><h4>Lifetime Warranty</h4><p>On all workmanship.</p></div>
+          </div>
+          <div class="feature-mini">
+            <div class="chk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A66C44" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div><h4>24/7 Emergency</h4><p>Always available.</p></div>
+          </div>
+        </div>
+        <a href="about.html" class="btn-outline-dark">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="label">Testimonials</div>
+      <h2 class="section-title md">What Our Clients Say</h2>
+      <div class="review-grid cols-6">
+        <div class="review-card">
+          <div class="stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p>Highly recommend. Great communication!</p>
+          <div class="author">Mathew L.</div>
+        </div>
+        <div class="review-card">
+          <div class="stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p>Prompt, professional and very fairly priced. Would absolutely use again.</p>
+          <div class="author">Sarah K.</div>
+        </div>
+        <div class="review-card">
+          <div class="stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p>Excellent service from start to finish. Upfront pricing, on-time arrival. Everything you want.</p>
+          <div class="author">James W.</div>
+        </div>
+        <div class="review-card">
+          <div class="stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p>Called about a burst pipe on a Saturday night. They were here within an hour.</p>
+          <div class="author">David M.</div>
+        </div>
+        <div class="review-card">
+          <div class="stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p>Respectful of our property, cleaned up after themselves, and the price was exactly as quoted.</p>
+          <div class="author">Rebecca T.</div>
+        </div>
+        <div class="review-card">
+          <div class="stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#F5A623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p>Had our hot water system replaced. Great advice, competitive price, done in half a day.</p>
+          <div class="author">Paul H.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREAS -->
+  <section class="areas-section">
+    <div class="areas-inner">
+      <div class="areas-text">
+        <div class="label dark">Service Areas</div>
+        <h2>Areas We Service</h2>
+        <p>Trusted plumbing across the Central Coast, Newcastle, Lake Macquarie and the Hunter Valley. Wherever you are, our team is ready to help.</p>
+        <a href="areas.html" class="area-cta">View All Areas</a>
+      </div>
+      <div class="areas-map">
+        <svg viewBox="0 0 560 520" xmlns="http://www.w3.org/2000/svg">
+          <!-- Ocean -->
+          <rect x="0" y="0" width="560" height="520" fill="#1e3a3a"/>
+          <!-- Land mass -->
+          <path d="M0,0 L0,520 L560,520 L560,0 Z" fill="#2C4949"/>
+          <path d="M420,0 C410,30 430,60 445,90 C455,110 460,120 455,140 C448,165 435,180 440,200 C445,220 450,235 445,260 C440,280 430,295 435,320 C440,345 450,360 445,390 C440,420 430,445 440,470 C445,490 450,510 455,520 L560,520 L560,0 Z" fill="#243f42" opacity="0.6"/>
+          <!-- Coastline -->
+          <path d="M420,0 C410,30 430,60 445,90 C455,110 460,120 455,140 C448,165 435,180 440,200 C445,220 450,235 445,260 C440,280 430,295 435,320 C440,345 450,360 445,390 C440,420 430,445 440,470 C445,490 450,510 455,520" fill="none" stroke="rgba(105,173,182,0.4)" stroke-width="2"/>
+          <!-- Lake Macquarie water body -->
+          <ellipse cx="390" cy="260" rx="30" ry="45" fill="#243f42" opacity="0.7" stroke="rgba(105,173,182,0.25)" stroke-width="1"/>
+          <!-- Hunter River -->
+          <path d="M60,100 C100,95 150,100 200,108 C250,115 300,110 350,118 C380,122 400,115 430,100" fill="none" stroke="rgba(105,173,182,0.3)" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- Roads -->
+          <path d="M390,80 L370,160 L380,250 L360,340 L350,400 L370,470" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="3" stroke-dasharray="6 4"/>
+          <path d="M150,120 L250,130 L350,140 L390,130" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="3" stroke-dasharray="6 4"/>
+          <path d="M200,130 L220,200 L250,280 L280,350" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="2" stroke-dasharray="4 4"/>
+          <!-- Service area glow -->
+          <ellipse cx="310" cy="260" rx="200" ry="200" fill="url(#areaGlow)" opacity="0.3"/>
+          <defs>
+            <radialGradient id="areaGlow"><stop offset="0%" stop-color="#A66C44" stop-opacity="0.3"/><stop offset="100%" stop-color="#A66C44" stop-opacity="0"/></radialGradient>
+            <radialGradient id="pinGlow"><stop offset="0%" stop-color="#A66C44" stop-opacity="0.6"/><stop offset="100%" stop-color="#A66C44" stop-opacity="0"/></radialGradient>
+          </defs>
+
+          <!-- LOCATION PINS -->
+          <!-- Raymond Terrace -->
+          <a href="areas.html" class="map-pin">
+            <circle cx="355" cy="62" r="12" fill="url(#pinGlow)"/>
+            <circle cx="355" cy="62" r="5" fill="#F5A623" class="map-pin-dot" stroke="#fff" stroke-width="1.5"/>
+            <rect x="370" y="52" width="120" height="22" class="map-pin-label-bg"/>
+            <text x="380" y="67" class="map-pin-label">Raymond Terrace</text>
+          </a>
+          <!-- Maitland -->
+          <a href="areas.html" class="map-pin">
+            <circle cx="250" cy="95" r="12" fill="url(#pinGlow)"/>
+            <circle cx="250" cy="95" r="5" fill="#F5A623" class="map-pin-dot" stroke="#fff" stroke-width="1.5"/>
+            <rect x="265" y="85" width="68" height="22" class="map-pin-label-bg"/>
+            <text x="275" y="100" class="map-pin-label">Maitland</text>
+          </a>
+          <!-- Newcastle -->
+          <a href="areas.html" class="map-pin">
+            <circle cx="410" cy="118" r="12" fill="url(#pinGlow)"/>
+            <circle cx="410" cy="118" r="6" fill="#F5A623" class="map-pin-dot" stroke="#fff" stroke-width="2"/>
+            <rect x="345" y="130" width="78" height="22" class="map-pin-label-bg"/>
+            <text x="355" y="145" class="map-pin-label">Newcastle</text>
+          </a>
+          <!-- Cessnock -->
+          <a href="areas.html" class="map-pin">
+            <circle cx="145" cy="175" r="12" fill="url(#pinGlow)"/>
+            <circle cx="145" cy="175" r="5" fill="#F5A623" class="map-pin-dot" stroke="#fff" stroke-width="1.5"/>
+            <rect x="160" y="165" width="72" height="22" class="map-pin-label-bg"/>
+            <text x="170" y="180" class="map-pin-label">Cessnock</text>
+          </a>
+          <!-- Hunter Valley -->
+          <a href="areas.html" class="map-pin">
+            <circle cx="90" cy="120" r="12" fill="url(#pinGlow)"/>
+            <circle cx="90" cy="120" r="6" fill="#F5A623" class="map-pin-dot" stroke="#fff" stroke-width="2"/>
+            <rect x="30" y="132" width="100" height="22" class="map-pin-label-bg"/>
+            <text x="40" y="147" class="map-pin-label">Hunter Valley</text>
+          </a>
+          <!-- Charlestown -->
+          <a href="areas.html" class="map-pin">
+            <circle cx="375" cy="195" r="12" fill="url(#pinGlow)"/>
+            <circle cx="375" cy="195" r="5" fill="#F5A623" class="map-pin-dot" stroke="#fff" stroke-width="1.5"/>
+            <rect x="286" y="185" width="84" height="22" class="map-pin-label-bg"/>
+            <text x="296" y="200" class="map-pin-label">Charlestown</text>
+          </a>
+          <!-- Lake Macquarie -->
+          <a href="areas.html" class="map-pin">
+            <circle cx="355" cy="270" r="12" fill="url(#pinGlow)"/>
+            <circle cx="355" cy="270" r="6" fill="#F5A623" class="map-pin-dot" stroke="#fff" stroke-width="2"/>
+            <rect x="250" y="278" width="104" height="22" class="map-pin-label-bg"/>
+            <text x="260" y="293" class="map-pin-label">Lake Macquarie</text>
+          </a>
+          <!-- Morisset -->
+          <a href="areas.html" class="map-pin">
+            <circle cx="320" cy="330" r="12" fill="url(#pinGlow)"/>
+            <circle cx="320" cy="330" r="5" fill="#F5A623" class="map-pin-dot" stroke="#fff" stroke-width="1.5"/>
+            <rect x="335" y="320" width="65" height="22" class="map-pin-label-bg"/>
+            <text x="345" y="335" class="map-pin-label">Morisset</text>
+          </a>
+          <!-- Wyong -->
+          <a href="areas.html" class="map-pin">
+            <circle cx="285" cy="385" r="12" fill="url(#pinGlow)"/>
+            <circle cx="285" cy="385" r="5" fill="#F5A623" class="map-pin-dot" stroke="#fff" stroke-width="1.5"/>
+            <rect x="300" y="375" width="54" height="22" class="map-pin-label-bg"/>
+            <text x="310" y="390" class="map-pin-label">Wyong</text>
+          </a>
+          <!-- Tuggerah -->
+          <a href="areas.html" class="map-pin">
+            <circle cx="330" cy="395" r="12" fill="url(#pinGlow)"/>
+            <circle cx="330" cy="395" r="5" fill="#F5A623" class="map-pin-dot" stroke="#fff" stroke-width="1.5"/>
+            <rect x="345" y="400" width="68" height="22" class="map-pin-label-bg"/>
+            <text x="355" y="415" class="map-pin-label">Tuggerah</text>
+          </a>
+          <!-- Gosford -->
+          <a href="areas.html" class="map-pin">
+            <circle cx="350" cy="455" r="12" fill="url(#pinGlow)"/>
+            <circle cx="350" cy="455" r="5" fill="#F5A623" class="map-pin-dot" stroke="#fff" stroke-width="1.5"/>
+            <rect x="365" y="445" width="62" height="22" class="map-pin-label-bg"/>
+            <text x="375" y="460" class="map-pin-label">Gosford</text>
+          </a>
+          <!-- Central Coast -->
+          <a href="areas.html" class="map-pin">
+            <circle cx="240" cy="440" r="12" fill="url(#pinGlow)"/>
+            <circle cx="240" cy="440" r="6" fill="#F5A623" class="map-pin-dot" stroke="#fff" stroke-width="2"/>
+            <rect x="155" y="448" width="100" height="22" class="map-pin-label-bg"/>
+            <text x="165" y="463" class="map-pin-label">Central Coast</text>
+          </a>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <h2>Need a Plumber?</h2>
+    <p>$0 call out fee. Available 24/7. Upfront pricing guaranteed.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn-copper">Get a Free Quote</a>
+      <a href="tel:0404998448" class="btn-ghost">0404 998 448</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-accent"></div>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <img src="https://apexplumbingprojects.com.au/wp-content/uploads/2026/03/Apex-Logo.png" alt="Apex Plumbing Projects" class="footer-logo-img">
+          <p class="footer-desc">Trusted plumbing across Newcastle, Central Coast, Lake Macquarie and the Hunter. Proudly Indigenous-owned. Supply Nation certified.</p>
+        </div>
+        <div>
+          <div class="footer-heading">SERVICES</div>
+          <a href="residential-plumbing.html" class="footer-link">Residential Plumbing</a>
+          <a href="commercial-plumbing.html" class="footer-link">Commercial Plumbing</a>
+          <a href="industrial-plumbing.html" class="footer-link">Industrial Plumbing</a>
+          <a href="blocked-drains.html" class="footer-link">Blocked Drains</a>
+          <a href="hot-water-repairs.html" class="footer-link">Hot Water Systems</a>
+          <a href="bathroom-renovations.html" class="footer-link">Bathroom Renovations</a>
+          <a href="toilet-repairs.html" class="footer-link">Toilet Repairs</a>
+          <a href="plumbing-maintenance.html" class="footer-link">Plumbing Maintenance</a>
+          <a href="leaking-pipes.html" class="footer-link">Leaking Pipes</a>
+          <a href="water-filtration.html" class="footer-link">Water Filtration Systems</a>
+        </div>
+        <div>
+          <div class="footer-heading">AREAS</div>
+          <span class="footer-link">Newcastle</span>
+          <span class="footer-link">Central Coast</span>
+          <span class="footer-link">Lake Macquarie</span>
+          <span class="footer-link">Hunter Valley</span>
+          <span class="footer-link">Gosford</span>
+          <span class="footer-link">Wyong</span>
+          <span class="footer-link">Tuggerah</span>
+          <span class="footer-link">Morisset</span>
+        </div>
+        <div>
+          <div class="footer-heading">CONTACT</div>
+          <a href="tel:0404998448" class="footer-phone">0404 998 448</a>
+          <a href="tel:1300390232" class="footer-phone-alt">1300 390 232</a>
+          <div class="footer-email">admin@apexplumbingprojects.com</div>
+          <div class="footer-addr">9/61 Gateway Boulevard, Morisset NSW</div>
+          <div class="footer-hours">Mon-Fri 6am-6pm / 24/7 Emergency</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2026 Apex Plumbing Projects</span>
+        <span class="footer-credit">Website by <span>JRNY Digital</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+// Mobile nav toggle
+document.addEventListener('DOMContentLoaded', function() {
+  var toggle = document.querySelector('.mob-toggle');
+  var menu = document.querySelector('.mob-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', function() {
+      menu.classList.toggle('open');
+    });
+  }
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var answer = this.nextElementSibling;
+      var wasOpen = this.classList.contains('open');
+      // Close all in same FAQ group
+      var parent = this.closest('.faq-list');
+      if (parent) {
+        parent.querySelectorAll('.faq-q').forEach(function(q) { q.classList.remove('open'); });
+        parent.querySelectorAll('.faq-a').forEach(function(a) { a.classList.remove('open'); });
+      }
+      if (!wasOpen) {
+        this.classList.add('open');
+        answer.classList.add('open');
+      }
+    });
+  });
+});
+
+</script>
+</body>
+</html>
